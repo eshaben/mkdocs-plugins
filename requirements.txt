@@ -1,0 +1,5 @@
+mkdocs==1.6.1
+
+# For cards plugin
+mkdocs-material==9.6.15
+pymdown-extensions==10.14.3
