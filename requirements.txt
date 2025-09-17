@@ -3,3 +3,8 @@ mkdocs==1.6.1
 # For cards plugin
 mkdocs-material==9.6.15
 pymdown-extensions==10.14.3
+
+# For minify plugin
+htmlmin>=0.1.12
+jsmin>=3.0.1
+csscompressor>=0.9.5
