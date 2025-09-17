@@ -24,4 +24,4 @@ pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://
 
 This repository is licensed under the [BSD-2-Clause License](LICENSE).
 
-**This is a testing version (0.1.0a1) available on Test PyPI for evaluation purposes.**
+**This is a testing version available on Test PyPI for evaluation purposes.**
