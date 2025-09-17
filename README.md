@@ -9,19 +9,10 @@ Currently included:
 
 ## Installation
 
-TODO: Add installation instructions.
+Install the plugins using pip from TestPyPI:
 
-## Usage
-
-Enable one or more plugins in your `mkdocs.yml`:
-
-```yaml
-plugins:
-  - cards
-  - minify:
-      minify_html: true
-      minify_css: true
-      minify_js: true
+```bash
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple mkdocs-plugins-papermoon
 ```
 
 ## Documentation
