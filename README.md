@@ -17,9 +17,11 @@ pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://
 
 ## Documentation
 
-- [Cards Plugin Documentation](docs/cards.md)
-- [Minify Plugin Documentation](docs/minify.md)
+- [Cards Plugin Documentation](https://github.com/eshaben/mkdocs-plugins/blob/main/docs/cards.md)
+- [Minify Plugin Documentation](https://github.com/eshaben/mkdocs-plugins/blob/main/docs/minify.md)
 
 ## License
 
 This repository is licensed under the [BSD-2-Clause License](LICENSE).
+
+**This is a testing version (0.1.0a1) available on Test PyPI for evaluation purposes.**

@@ -3,11 +3,14 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mkdocs-plugins"
-version = "0.1.0"
+name = "mkdocs-plugins-papermoon"
+version = "0.1.0a1"
 description = "A collection of mkdocs plugins"
-authors = [{ name="Erin Shaben", email="eshaben@icloud.com" }]
-license = { text = "BSD-2-Clause" }
+authors = [
+    { name="Erin Shaben", email="eshaben@icloud.com" },
+    { name="Lucas Malizia", email="lucas.malizia27@gmail.com" }
+]
+license = "BSD-2-Clause"
 dependencies = [
   "mkdocs>=1.6",
   "mkdocs-material>=9.0",
