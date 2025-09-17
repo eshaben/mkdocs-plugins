@@ -156,7 +156,7 @@ class MinifyPlugin(BasePlugin):
 
         # Expand simple one-segment globs like "assets/*.css" relative to site_dir.
         file_paths2: List[Path] = []
-        for fp in file_paths.copy():
+        for fp in file_paths:
             if "*" in fp:
                 glob_parts = fp.split("*", maxsplit=1)
                 glob_dir = site_dir / Path(glob_parts[0].lstrip('/'))
@@ -366,7 +366,8 @@ class MinifyPlugin(BasePlugin):
 
     def on_post_page(self, output: str, *, page: Page, config: MkDocsConfig) -> Optional[str]:
         """Minify rendered HTML and apply scoped CSS for Markdown pages."""
-        output = self._minify_html_page(output)
+        if self.config.get("minify_html", False):
+            output = self._minify_html_page(output)
         output = self._inject_scoped_css(output, page=page, config=config)
         return output
 
@@ -584,7 +585,8 @@ class MinifyPlugin(BasePlugin):
         """
         logger.debug("on_post_template for template: %s", template_name)
         # Minify template HTML if enabled
-        output_content = self._minify_html_page(output_content) or output_content
+        if self.config.get("minify_html", False):
+            output_content = self._minify_html_page(output_content) or output_content
 
         tpl_map = self.config.get("scoped_css_templates") or {}
         if not tpl_map:
