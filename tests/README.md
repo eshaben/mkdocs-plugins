@@ -1,4 +1,4 @@
-# Test Suite for mkdocs-plugins-papermoon
+# Test Suite for papermoon-mkdocs-plugins
 
 This directory contains tests for the MkDocs Plugins Collection.
 
@@ -34,4 +34,4 @@ The test suite requires:
 - csscompressor
 - packaging
 
-These are listed in `requirements.txt` and `tests/requirements.txt`.
+These are listed in `requirements.txt` and `requirements-dev.txt`.

@@ -1,10 +1,19 @@
-# Test for minify-plugin
+# Test for the Minify Plugin
 
-This directory contains a simple and focused test suite for the mkdocs-minify-plugin.
+This directory contains a simple and focused test suite for the Minify-Plugin.
 
-## Test File
+## Run test
+```bash
+pytest tests/minify/
+```
 
-### `test_minify.py`
+## Run test with verbose output
+```bash
+pytest tests/minify/ -v
+```
+
+## `test_minify.py`
+
 A single, comprehensive test file that covers all plugin functionality with one test per main feature:
 
 - **`test_plugin_init`** - Plugin initialization and configuration
