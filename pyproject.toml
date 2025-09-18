@@ -22,7 +22,6 @@ dependencies = [
 ]
 
 [project.entry-points."mkdocs.plugins"]
-cards = "plugins.cards.plugin:CardsPlugin"
 minify = "plugins.minify.plugin:MinifyPlugin"
 
 # Configuration for development tools
