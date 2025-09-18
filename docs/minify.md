@@ -1,6 +1,6 @@
 # Minify Plugin
 
-The **Minify Plugin** allows you to minify HTML, JS, and CSS files prior to being written to disk with support for:
+This fork of the [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) allows you to minify HTML, JS, and CSS files prior to being written to disk, and also adds support for scoped CSS injection so styles can be loaded only on specific pages or templates instead of globally.
 
 - HTML minification using [htmlmin2](https://github.com/wilhelmer/htmlmin)
 - JavaScript minification using [jsmin](https://github.com/tikitu/jsmin/)
@@ -8,7 +8,7 @@ The **Minify Plugin** allows you to minify HTML, JS, and CSS files prior to bein
 
 ## 🔹 Usage
 
-Enable the plugin in your `mkdocs.yml` with all available options:
+Enable the plugin in your `mkdocs.yml` with with any of the available options as needed:
 
 ```yaml
 plugins:
@@ -90,10 +90,8 @@ plugins:
 
 ## 🔹 Notes
 
-- Both `minify_js` and `minify_css` support the use of **globs** (e.g. `**/*.css`, `**/*.js`) for file specification.
-- The plugin automatically handles the injection of minified files into your site without requiring manual configuration of `extra_javascript` or `extra_css`.
+- Both `js_files` and `css_files` support the use of **globs** (e.g. `**/*.css`, `**/*.js`) for file specification.
 - Scoped CSS injection provides fine-grained control over where additional CSS is applied in your site.
-- Cache-safe mode generates unique filenames with hashes to ensure browsers always load the latest version of your assets.
 
 ## Credits
 
