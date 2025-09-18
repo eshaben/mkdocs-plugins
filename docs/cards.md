@@ -8,6 +8,13 @@ The **Cards Plugin** allows you to create responsive grid cards in Markdown with
 
 ## 🔹 Usage
 
+Configure the plugin in your `mkdocs.yml` file:
+
+```yaml
+plugins:
+  - cards
+```
+
 ### Standard Cards
 
 Wrap card content in a block fenced with `::: cards`. Cards can include just a title and description:
