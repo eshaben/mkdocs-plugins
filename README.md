@@ -9,10 +9,23 @@ Currently included:
 
 ## Installation
 
-Install the plugins using pip from TestPyPI:
+Install the plugins using pip from PyPI:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple mkdocs-plugins-papermoon
+pip install papermoon-mkdocs-suite
+```
+
+## Usage
+
+Enable one or more plugins in your `mkdocs.yml`:
+
+```yaml
+plugins:
+  - cards
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
 ```
 
 ## Documentation
@@ -23,5 +36,3 @@ pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://
 ## License
 
 This repository is licensed under the [BSD-2-Clause License](LICENSE).
-
-**This is a testing version available on Test PyPI for evaluation purposes.**
