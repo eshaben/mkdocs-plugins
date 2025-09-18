@@ -3,14 +3,13 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mkdocs-plugins-papermoon"
-version = "0.1.1"
+name = "papermoon-mkdocs-plugins"
+version = "0.1.0a1"
 description = "A collection of mkdocs plugins"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [
-    { name="Erin Shaben", email="eshaben@icloud.com" },
-    { name="Lucas Malizia", email="lucas.malizia27@gmail.com" }
+    { name="Papermoon" },
 ]
 license = "BSD-2-Clause"
 dependencies = [
