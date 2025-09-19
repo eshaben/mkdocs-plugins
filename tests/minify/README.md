@@ -2,12 +2,14 @@
 
 This directory contains a simple and focused test suite for the Minify-Plugin.
 
-## Run test
+## Run Tests
+
 ```bash
 pytest tests/minify/
 ```
 
-## Run test with verbose output
+## Run Tests with Verbose Output
+
 ```bash
 pytest tests/minify/ -v
 ```

@@ -1,6 +1,6 @@
 # Test Suite for papermoon-mkdocs-plugins
 
-This directory contains tests for the MkDocs Plugins Collection.
+This directory contains tests for the PaperMoon MkDocs Plugins collection.
 
 ## Running Tests
 
@@ -9,13 +9,15 @@ This directory contains tests for the MkDocs Plugins Collection.
 pytest
 ```
 
-### Run tests for a specific plugin
+### Run Tests for a Specific Plugin
+
 ```bash
 # Run only Minify plugin tests
 pytest tests/minify/
 ```
 
-### Run tests with verbose output
+### Run Tests with Verbose Output
+
 ```bash
 pytest -v
 ```

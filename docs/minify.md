@@ -1,6 +1,8 @@
 # Minify Plugin
 
-This fork of the [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) allows you to minify HTML, JS, and CSS files prior to being written to disk, and also adds support for scoped CSS injection so styles can be loaded only on specific pages or templates instead of globally.
+This fork of the [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) allows you to minify HTML, JS, and CSS files before they are written to disk. It also adds support for scoped CSS injection, allowing styles to be loaded only on specific pages or templates, rather than globally.
+
+It supports:
 
 - HTML minification using [htmlmin2](https://github.com/wilhelmer/htmlmin)
 - JavaScript minification using [jsmin](https://github.com/tikitu/jsmin/)
