@@ -1,26 +1,16 @@
-# mkdocs-minify-plugin-papermoon
+# Minify Plugin
 
-[![PyPI - Python Version][python-image]][pypi-link]
+This fork of the [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) allows you to minify HTML, JS, and CSS files before they are written to disk. It also adds support for scoped CSS injection, allowing styles to be loaded only on specific pages or templates, rather than globally.
 
-> **Fork Notice**: This is a fork of [mkdocs-minify-plugin](https://github.com/byrnereese/mkdocs-minify-plugin) by Byrne Reese and Lars Wilhelmer. This fork is maintained by [Lucas Malizia](https://github.com/0xlukem).
+It supports:
 
-An MkDocs plugin to minify HTML, JS or CSS files prior to being written to disk.
+- HTML minification using [htmlmin2](https://github.com/wilhelmer/htmlmin)
+- JavaScript minification using [jsmin](https://github.com/tikitu/jsmin/)
+- CSS minification using [csscompressor](https://github.com/sprymix/csscompressor)
 
-HTML minification is done using [htmlmin2](https://github.com/wilhelmer/htmlmin).
+## 🔹 Usage
 
-JS minification is done using [jsmin](https://github.com/tikitu/jsmin/).
-
-CSS minification is done using [csscompressor](https://github.com/sprymix/csscompressor).
-
-## Setup
-
-Install the plugin using pip (from TestPyPI):
-
-```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple mkdocs-minify-plugin-papermoon-test
-```
-
-Activate the plugin in `mkdocs.yml`:
+Enable the plugin in your `mkdocs.yml` with with any of the available options as needed:
 
 ```yaml
 plugins:
@@ -46,52 +36,64 @@ plugins:
           - assets/css/homepage.css
 ```
 
-> **Note:** If you have no `plugins` entry in your config file yet, you'll likely also want to add the `search` plugin. MkDocs enables it by default if there is no `plugins` entry set, but now you have to enable it explicitly.
+## 🔹 Configuration
 
-## Options
+### Basic Options
 
 - `minify_html`:
   - Defaults to `False`.
   - Sets whether HTML files should be minified.
+
 - `minify_js`:
   - Defaults to `False`.
-  - Sets whether JS files should be minified.<br>
-    If set to `True`, you must specify the JS to be minified files using `js_files` (see below).
+  - Sets whether JS files should be minified.
+  - If set to `True`, you must specify the JS files using `js_files`.
+
 - `minify_css`:
   - Defaults to `False`.
-  - Sets whether CSS files should be minified.<br>
-    If set to `True`, you must specify the CSS to be minified files using `css_files` (see below).
+  - Sets whether CSS files should be minified.
+  - If set to `True`, you must specify the CSS files using `css_files`.
+
+### Advanced Options
+
 - `htmlmin_opts`:
   - Defaults to `None`.
   - Sets runtime htmlmin API options using the [config parameters of htmlmin](https://htmlmin.readthedocs.io/en/latest/reference.html#main-functions)
+
 - `cache_safe`:
   - Defaults to `False`.
-  - Sets whether a hash should be added to the JS and CSS file names. This ensures that the browser always loads the latest version of the files instead of loading them from the cache.<br>
-    If set to `True`, you must specify the files using `js_files` or `css_files` (see below).
+  - Sets whether a hash should be added to the JS and CSS file names.
+  - This ensures that the browser always loads the latest version of the files instead of loading them from the cache.
+  - If set to `True`, you must specify the files using `js_files` or `css_files`.
+
+### File Specification
+
 - `js_files`:
   - Defaults to `None`.
-  - List of JS files to be minified.<br>
-    The plugin will generate minified versions of these files and save them as `.min.js` in the output directory.
+  - List of JS files to be minified.
+  - The plugin will generate minified versions of these files and save them as `.min.js` in the output directory.
+
 - `css_files`:
   - Defaults to `None`.
-  - List of CSS files to be minified.<br>
-    The plugin will generate minified versions of these files and save them as `.min.css` in the output directory.
+  - List of CSS files to be minified.
+  - The plugin will generate minified versions of these files and save them as `.min.css` in the output directory.
+
+### Scoped Injection
+
 - `scoped_css`:
   - Defaults to `None`.
-  - A mapping of Markdown page paths or glob patterns to lists of CSS files.<br>
-    These CSS files will be minified, hashed, and injected only into the matching pages instead of globally.
+  - A mapping of Markdown page paths or glob patterns to lists of CSS files.
+  - These CSS files will be minified, hashed, and injected only into the matching pages instead of globally.
+
 - `scoped_css_templates`:
   - Defaults to `None`.
-  - A mapping of template names or glob patterns (e.g., `home.html`, `index-page.html`) to lists of CSS files.<br>
-    These CSS files will be minified, hashed, and injected only into the matching templates instead of globally.
+  - A mapping of template names or glob patterns (e.g., `home.html`, `index-page.html`) to lists of CSS files.
+  - These CSS files will be minified, hashed, and injected only into the matching templates instead of globally.
 
-> **Note:** When using `minify_js` or `minify_css`, you don't have to modify the `extra_javascript` or `extra_css` entries
-in your `mkdocs.yml` file. The plugins automatically takes care of that.
-Both `minify_js` and `minify_css` support the use of **globs** (e.g. `**/*.css`).
+## 🔹 Notes
 
-
-
-With this configuration, HTML, JS, and CSS files will be minified as specified. The `scoped_css` section maps certain pages or path globs to extra CSS files—these stylesheets will only be included on the specified pages. The `scoped_css_templates` option works similarly but targets specific HTML templates, allowing you to inject minified and hashed CSS only into those templates instead of globally. This provides fine-grained control over where additional CSS is applied in your site.
+- Both `js_files` and `css_files` support the use of **globs** (e.g. `**/*.css`, `**/*.js`) for file specification.
+- Scoped CSS injection provides fine-grained control over where additional CSS is applied in your site.
 
 ## Credits
 

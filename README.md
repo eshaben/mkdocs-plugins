@@ -4,12 +4,16 @@ A collection of custom [MkDocs](https://www.mkdocs.org/) plugins designed to ext
 
 Currently included:
 
-- **Cards**: Turn simple Markdown blocks into responsive grid cards, with clickable or non-clickable layouts.
-- **Minify**: Minify HTML, JS, and CSS files globally or by scope to optimize your site's performance.
+- **[Cards](https://github.com/papermoonio/mkdocs-plugins/blob/main/docs/cards.md)**: Turn simple Markdown blocks into responsive grid cards, with clickable or non-clickable layouts.
+- **[Minify](https://github.com/papermoonio/mkdocs-plugins/blob/main/docs/minify.md)**: Minify HTML, JS, and CSS files globally or by scope to optimize your site's performance.
 
 ## Installation
 
-TODO: Add installation instructions.
+Install the plugins using pip from PyPI:
+
+```bash
+pip install papermoon-mkdocs-plugins
+```
 
 ## Usage
 
@@ -23,12 +27,6 @@ plugins:
       minify_css: true
       minify_js: true
 ```
-
-## Documentation
-
-- [Cards Plugin Documentation](docs/cards.md)
-- [Minify Plugin Documentation](docs/minify.md)
-
 ## License
 
 This repository is licensed under the [BSD-2-Clause License](LICENSE).
