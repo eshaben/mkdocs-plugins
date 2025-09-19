@@ -4,7 +4,7 @@ This directory contains tests for the PaperMoon MkDocs Plugins collection.
 
 ## Running Tests
 
-### Run all tests
+### Run All Tests
 ```bash
 pytest
 ```
